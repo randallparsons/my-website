@@ -1,17 +1,15 @@
 * {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
 }
+
 /* Styles that provide the background behind the body */
 html {
-    background-image: linear-gradient(
-        to bottom, #af700b 0%, #ffffff 100%);
-    /*margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 2em;*/
+    background-image: linear-gradient(to bottom, #af700b 0%, #ffffff 100%);
 }
 
 body {
-    width: 900px;
+    width: 85%;
     background-color: white;
     margin: 15px auto;
     padding: 15px 2em;
@@ -19,28 +17,80 @@ body {
     border-radius: 25px;
     box-shadow: 5px 5px 0 0;
 }
+/* Header Section */
 
-header>img {
+header {
+    width: 100%;
+}
+
+#nav_menu3 ul {
+    list-style-type: none;
+    padding: 1em 0;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#nav_menu3 ul li {
+    display: inline;
+    padding: 0 1.5em;
+}
+#nav_menu3 ul li a {
+    font-weight: bold;
+    color: #5c1c60;
+}
+#nav_menu3 ul li a.current {
+    text-decoration: none;
+}
+
+/* Back to "Header Section"... */
+header img {
+    /*clear: left;*/
     float: left;
+    width: 20%;
     margin-top: 2em;
-    margin-right: 1em;
-    margin-bottom: 4em;
+    margin-right: 2em;
+    margin-bottom: 1em;
     padding: .5em;
     border: .1em solid black;
 }
-header>h1 {
-    color:rgb(177, 73, 4);
+
+#header_text_block {
+    margin-top: .5em;
+    background-color: hsl(304, 65%, 95%);
+}
+
+header h1 {
+    /*clear: left;*/
+    float: none;
+    color: rgb(177, 73, 4);
     font-size: 300%;
     font-weight: 900;
     line-height: .25em;
     text-shadow: .05em .03em .03em rgba(38, 6, 44, .5);
+    width: auto;
+    /*padding-left: 5em;*/
 }
+
+h1.sub_head {
+    font-size: 2em;
+}
+
+#super {
+    font-size: 50%;
+}
+
+header h2 {
+    clear: left;
+    margin-bottom: 0;
+}
+
 header h3 {
     clear: left;
     margin-bottom: 0;
     /*text-align: center;*/
 }
 
+/* Main Section */
 main {
     border-bottom: .2em solid rgb(77, 77, 77);
 }
@@ -48,11 +98,15 @@ main {
 h3 {
     line-height: .1em;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-size: 175%;
-    color:  rgb(55, 26, 81);
+    color: rgb(55, 26, 81);
     margin-bottom: 0;
 }
+
 p {
     font-size: 125%;
     font-weight: 537;
@@ -62,7 +116,7 @@ p {
 ol.special_items {
     font-size: 110%;
     font-weight: 600;
-    color:rgb(13, 13, 58);
+    color: rgb(13, 13, 58);
     line-height: 1.35em;
 }
 
@@ -78,11 +132,11 @@ ul>li {
 
 #acoustic_link {
     font-size: 150%;
-    color:  rgb(55, 26, 81);
-    margin-bottom: 0;
+    color: rgb(55, 26, 81);
+    margin-bottom: .5em;
 }
 
-#guit_link{
+#guit_link {
     font-size: larger;
     /*text-align: center;*/
 }
@@ -91,6 +145,7 @@ a:hover {
     color: rgb(79, 5, 70);
     font-size: 125%;
 }
+
 a:active {
     color: rgb(233, 45, 3);
     font-size: 125%;
@@ -101,4 +156,88 @@ a:active {
     text-align: right;
     font-size: 85%;
     margin-right: 2em;
+}
+
+/* Media Queries Begin HERE! */
+@media only screen and (width <=785px) {
+    /*h2 {
+        color: rgb(255, 255, 255);
+    }*/
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h1.sub_head {
+        clear: both;
+        font-size: 1.75em;
+        /*color: black;*/
+    }
+
+    p {
+        font-size: 1.25em;
+        /*color: white font-size: 80%;*/
+        font-weight: 537;
+        line-height: 1.25em;
+    }
+}
+
+@media only screen and (width <=625px) {
+    #acoustic_link {
+        font-size: 110%;
+        color: rgb(55, 26, 81);
+        margin-bottom: .5em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 1em;
+        /*color: white font-size: 80%;*/
+        font-weight: 537;
+        line-height: 1.25em;
+    }
+}
+
+@media only screen and (width <=565px) {
+    h1 {
+        color: rgb(255, 255, 255);
+    }
+
+    h1.sub_head {
+        clear: both;
+        font-size: 1.75em;
+        /*color: black;*/
+    }
+
+    h1.page_head {
+        /*clear: both;*/
+        font-size: 2.25em;
+        /*color: black;*/
+    }
+
+    h1.sub_head {
+        clear: both;
+        font-size: 1.75em;
+        /*color: black;*/
+    }
+
+    h1.page_head {
+        float: none;
+        color: black font-size: 200%;
+        font-weight: 900;
+        line-height: .25em;
+        text-shadow: .05em .03em .03em rgba(38, 6, 44, .5);
+        width: auto;
+    }
+
+    li {
+        font-size: .8em;
+    }
+
+    ul li {
+        font-size: .8em;
+    }
 }
