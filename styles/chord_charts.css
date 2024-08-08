@@ -17,6 +17,7 @@ body {
     border-radius: 25px;
     box-shadow: 5px 5px 0 0;
 }
+
 /* Header Section */
 
 /* Nav Menu First */
@@ -24,7 +25,8 @@ body {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    padding: 1em 0;     /* padding above and below li elements */
+    padding: 1em 0;
+    /* padding above and below li elements */
     text-align: center;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -41,6 +43,7 @@ body {
     font-weight: bold;
     color: #280424;
 }
+
 #nav_menu ul li a.current {
     text-decoration: none;
 }
@@ -50,17 +53,6 @@ header {
 }
 
 /* Back to "Header Section"... */
-header img {
-    /*clear: left;*/
-    float: left;
-    width: 20%;
-    margin-top: 2em;
-    margin-right: 2em;
-    margin-bottom: 1em;
-    padding: .5em;
-    border: .1em solid black;
-    min-width: 100px;
-}
 
 /* flex-container for "mast_head" and "sub_mast", starts as row */
 #mast_head {
@@ -81,10 +73,11 @@ header img {
 
 header h1 {
     color: rgb(177, 73, 4);
-    font-size: 250%;
+    font-size: 225%;
     font-weight: 900;
-    line-height: .25em;
+    line-height: auto;
     text-shadow: .05em .03em .03em rgba(38, 6, 44, .5);
+    text-align: center;
 }
 
 h1.sub_head {
@@ -99,10 +92,42 @@ header h3 {
     font-size: 1.25em;
     margin-bottom: 0;
     margin-top: 1em;
-    /*text-align: center;*/
+    text-align: center;
+}
+
+h2#acoustic_page {
+    clear: left;
+    font-size: 1.25em;
+}
+
+#guit_pic {
+    float: right;
 }
 
 /* Main Section */
+main div {
+    background-color: #a0dbdb;
+}
+div#chord_chart {
+    display: grid;
+    grid-template-columns: 12% 22% 22% 22% 22%;
+    grid-template-rows: 9, 1fr;
+    grid-template-areas:
+    "key maj min 7th mi7"
+    "d d d d d"
+    "g g g g g"
+    "c c c c c"
+    "e e e e e"
+    "a a a a a"
+    "f f f f f"
+    "b b b b b"
+    "x x x x x"
+}
+
+div#chord_chart p {
+    text-align: center;
+}
+
 main h2 {
     font-size: 1.5em;
     text-align: center;
@@ -114,9 +139,9 @@ main {
     border-bottom: .2em solid rgb(77, 77, 77);
 }
 
-h3 {
+/*h3 {
     line-height: .1em;
-}
+}*/
 
 h1,
 h2,
@@ -137,10 +162,6 @@ ol.special_items {
     font-weight: 600;
     color: rgb(13, 13, 58);
     line-height: 1.35em;
-}
-
-#steps_list {
-    border-bottom: .01em solid black;
 }
 
 ul>li {
@@ -178,10 +199,11 @@ a:active {
 }
 
 /* Media Queries Begin HERE! */
-@media only screen and (width <= 800px) {
+@media only screen and (width <=800px) {
     div h1.page_head {
         font-size: 2em;
     }
+
     div h1.sub_head {
         font-size: 1.5em;
     }
@@ -191,7 +213,7 @@ a:active {
         flex-direction: row;
         align-items: center;
     }
-    
+
     #sub_mast {
         display: flex;
         flex-direction: row;
@@ -221,14 +243,14 @@ a:active {
     }
 }
 
-@media only screen and (width <= 746px) {
+@media only screen and (width <=746px) {
     header h3 {
         clear: left;
         text-align: center;
     }
 }
 
-@media only screen and (width <= 660px) {
+@media only screen and (width <=620px) {
     #nav_menu ul {
         flex-direction: column;
         align-items: center;
@@ -240,12 +262,16 @@ a:active {
         align-items: center;
     }
     
+    header h3 {
+        font-size: .8em;
+    }
+
     #acoustic_link {
         font-size: 1.25em;
     }
 }
 
-@media only screen and (width <= 621px) {
+@media only screen and (width <=621px) {
     #sub_mast {
         display: flex;
         flex-direction: column;
@@ -261,83 +287,14 @@ a:active {
     }
 }
 
-@media only screen and (width <= 542px) {
+@media only screen and (width <=542px) {
     header h3 {
         font-size: .8em;
     }
 }
 
-@media only screen and (width <= 527px) {
+@media only screen and (width <=527px) {
     #acoustic_link {
         font-size: 1em;
     }
-    }
 }
-/*
-@media only screen and (width <= 785px) {
-    /*h2 {
-        color: rgb(255, 255, 255);
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h1.sub_head {
-        clear: both;
-        font-size: 1.75em;
-        color: black;
-    }
-
-    p {
-        font-size: 1.25em;
-        /*color: white font-size: 80%;
-        font-weight: 537;
-        line-height: 1.25em;
-    }
-}
-
-@media only screen and (width <= 625px) {
-    #acoustic_link {
-        font-size: 110%;
-        color: rgb(55, 26, 81);
-        margin-bottom: .5em;
-    }
-
-    h2 {
-        font-size: 1em;
-    }
-
-    p {
-        font-size: 1em;
-        color: white font-size: 80%;
-        font-weight: 537;
-        line-height: 1.25em;
-    }
-}
-
-@media only screen and (width <=565px) {
-    h1 {
-        color: rgb(255, 255, 255);
-    }
-
-    h1.sub_head {
-        clear: both;
-        font-size: 1.75em;
-        color: black;
-    }
-
-    h1.sub_head {
-        clear: both;
-        font-size: 1.75em;
-        color: black;
-    }
-
-    li {
-        font-size: .8em;
-    }
-
-    ul li {
-        font-size: .8em;
-    }
-}*/
