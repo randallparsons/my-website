@@ -17,6 +17,7 @@ body {
     border-radius: 25px;
     box-shadow: 5px 5px 0 0;
 }
+
 /* Header Section */
 
 /* Nav Menu First */
@@ -24,7 +25,8 @@ body {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    padding: 1em 0;     /* padding above and below li elements */
+    padding: 1em 0;
+    /* padding above and below li elements */
     text-align: center;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -32,29 +34,42 @@ body {
 }
 
 #nav_menu ul li {
-    display: linline;
+    display: block;
     padding: 0 1.5em;
-    width: 33.333%;
+    width: 20%;
+    text-wrap: nowrap;
 }
 
 #nav_menu ul li a {
     font-weight: bold;
     color: #280424;
 }
+
 #nav_menu ul li a.current {
     text-decoration: none;
 }
 
-header {
-    width: 100%;
+a:hover {
+    color: rgb(79, 5, 70);
+    font-size: 125%;
+    text-wrap: nowrap;
 }
 
-/* Back to "Header Section"... */
+a:active {
+    color: rgb(233, 45, 3);
+    font-size: 125%;
+}
+
+ul>li {
+    font-size: 115%;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
 header img {
-    /*clear: left;*/
     float: left;
     width: 20%;
-    margin-top: 2em;
+    margin-top: 0;
     margin-right: 2em;
     margin-bottom: 1em;
     padding: .5em;
@@ -62,74 +77,80 @@ header img {
     min-width: 100px;
 }
 
-/* flex-container for "mast_head" and "sub_mast", starts as row */
-#mast_head {
+#headline1 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    line-height: 0%;
+    padding-top: 1em;
 }
 
-#sub_mast {
+#headline2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-#second_submast {
-    padding-top: .25em;
+    line-height: 0%;
+    margin-bottom: .5em;
 }
 
 header h1 {
     color: rgb(177, 73, 4);
-    font-size: 250%;
+    font-size: 2.6em;
     font-weight: 900;
-    line-height: .25em;
     text-shadow: .05em .03em .03em rgba(38, 6, 44, .5);
 }
 
-h1.sub_head {
+/*
+.kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+*/
+
+header h2 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: rgb(177, 73, 4);
     font-size: 2em;
+    font-weight: 900;
+    text-shadow: .05em .03em .03em rgba(38, 6, 44, .5);
 }
 
 #super {
     font-size: 50%;
 }
 
+#second_submast {
+    padding-top: .25em;
+}
+
 header h3 {
-    font-size: 1.25em;
-    margin-bottom: 0;
-    margin-top: 1em;
-    /*text-align: center;*/
-}
-
-/* Main Section */
-main h2 {
     font-size: 1.5em;
-    text-align: center;
-    clear: left;
-    margin-bottom: 0;
-}
-
-main {
-    border-bottom: .2em solid rgb(77, 77, 77);
-}
-
-h3 {
-    line-height: .1em;
-}
-
-h1,
-h2,
-h3 {
-    font-size: 175%;
     color: rgb(55, 26, 81);
     margin-bottom: 0;
+    margin-top: .25em;
+}
+
+/* Main section */
+
+h2 {
+    clear: left;
+    font-size: 1.5em;
+    color: rgb(55, 26, 81);
+    text-align: center;
 }
 
 p {
-    font-size: 100%;
+    font-size: 1.1em;
     font-weight: 537;
     line-height: 1.25em;
+}
+
+#steps_list {
+    border-bottom: .01em solid black;
 }
 
 ol.special_items {
@@ -139,35 +160,12 @@ ol.special_items {
     line-height: 1.35em;
 }
 
-#steps_list {
-    border-bottom: .01em solid black;
-}
-
-ul>li {
-    font-size: 115%;
-    font-weight: 400;
-    line-height: 1.5rem;
-}
-
 #acoustic_link {
-    font-size: 150%;
-    color: rgb(55, 26, 81);
-    margin-bottom: .5em;
+    text-align: left;
 }
 
-#guit_link {
-    font-size: larger;
-    /*text-align: center;*/
-}
-
-a:hover {
-    color: rgb(79, 5, 70);
-    font-size: 125%;
-}
-
-a:active {
-    color: rgb(233, 45, 3);
-    font-size: 125%;
+main {
+    border-bottom: .2em solid rgb(77, 77, 77);
 }
 
 /* Footer formatting */
@@ -177,167 +175,63 @@ a:active {
     margin-right: 2em;
 }
 
-/* Media Queries Begin HERE! */
-@media only screen and (width <= 800px) {
-    div h1.page_head {
-        font-size: 2em;
-    }
-    div h1.sub_head {
-        font-size: 1.5em;
-    }
-
-    #mast_head {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    #sub_mast {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    header h3 {
-        font-size: 1em;
-    }
-
-    main h2 {
-        font-size: 1.25em;
-    }
-
-    #sub_mast {
-        padding-top: 1em;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    header h3 {
-        font-size: 1.25em;
-        margin-bottom: 0;
-        margin-top: 1.5em;
-        /*text-align: center;*/
-    }
-}
-
-@media only screen and (width <= 746px) {
-    header h3 {
-        clear: left;
-        text-align: center;
-    }
-}
-
-@media only screen and (width <= 660px) {
+/* Media Queries! */
+@media only screen and (width <=1033px) {
     #nav_menu ul {
         flex-direction: column;
         align-items: center;
+        text-wrap: nowrap;
+    }
+}
+
+@media only screen and (width <= 912px) {
+    header h3 {
+        clear: left;
     }
 
-    #mast_head {
-        display: flex;
+    #headline1 {
         flex-direction: column;
-        align-items: center;
+        align-items: normal;
+    }
+
+    header h1 {
+        line-height: .25em;
     }
     
-    #acoustic_link {
-        font-size: 1.25em;
-    }
-}
-
-@media only screen and (width <= 621px) {
-    #sub_mast {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    #headline2 {
+        clear: left;
     }
 
-    main h2 {
-        font-size: 1.1em;
-    }
-
-    p {
-        font-size: .85em;
-    }
-}
-
-@media only screen and (width <= 542px) {
     header h3 {
-        font-size: .8em;
-    }
-}
-
-@media only screen and (width <= 527px) {
-    #acoustic_link {
-        font-size: 1em;
-    }
-    }
-}
-/*
-@media only screen and (width <= 785px) {
-    /*h2 {
-        color: rgb(255, 255, 255);
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h1.sub_head {
-        clear: both;
-        font-size: 1.75em;
-        color: black;
-    }
-
-    p {
         font-size: 1.25em;
-        /*color: white font-size: 80%;
-        font-weight: 537;
-        line-height: 1.25em;
     }
 }
 
-@media only screen and (width <= 625px) {
-    #acoustic_link {
-        font-size: 110%;
-        color: rgb(55, 26, 81);
-        margin-bottom: .5em;
+@media only screen and (width <= 590px) {
+    header h1 {
+        font-size: 2em;
     }
 
-    h2 {
-        font-size: 1em;
+    header h2 {
+        font-size: 1.75em;
     }
-
-    p {
-        font-size: 1em;
-        color: white font-size: 80%;
-        font-weight: 537;
-        line-height: 1.25em;
+    header h3 {
+        font-size: 1.15em;
     }
 }
 
-@media only screen and (width <=565px) {
-    h1 {
-        color: rgb(255, 255, 255);
+@media only screen and (width <= 525px) {
+    header h1 {
+        font-size: 2em;
     }
 
-    h1.sub_head {
-        clear: both;
-        font-size: 1.75em;
-        color: black;
+    header h2 {
+        line-height: 1em;
+        padding: 0;
+        margin: 0;
     }
 
-    h1.sub_head {
-        clear: both;
-        font-size: 1.75em;
-        color: black;
+    #headline2 {
+        flex-direction: column;
     }
-
-    li {
-        font-size: .8em;
-    }
-
-    ul li {
-        font-size: .8em;
-    }
-}*/
+}
