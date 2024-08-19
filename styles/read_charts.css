@@ -20,36 +20,42 @@ body {
 /* Header Section */
 
 /* Nav Menu First */
+#highlight {
+    background-color: pink;
+    padding: 10px 0;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
 #nav_menu ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    padding: 1em 0;
-    /* padding above and below li elements */
-    text-align: center;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    padding: 0;
+    margin: auto;
     width: 100%;
+    padding-left: 9%;
 }
-
-#nav_menu ul li {
-    display: block;
-    padding: 0 1.5em;
+#nav_menu li {
     width: 20%;
-    text-wrap: nowrap;
-}
 
-#nav_menu ul li a {
-    font-weight: bold;
-    color: #280424;
 }
-
-#nav_menu ul li a.current {
+#nav_menu a {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
     text-decoration: none;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    border-right: 2px solid white;
 }
+#nav_menu a.lastitem { border-right: none; }
+     
+#nav_menu a.current { color: yellow; }
 
 a:hover {
-    color: rgb(79, 5, 70);
+    color: #e87e06;
     font-size: 125%;
     text-wrap: nowrap;
 }
@@ -57,12 +63,6 @@ a:hover {
 a:active {
     color: rgb(233, 45, 3);
     font-size: 125%;
-}
-
-ul>li {
-    font-size: 115%;
-    font-weight: 400;
-    line-height: 1.5rem;
 }
 
 header img {
@@ -228,6 +228,31 @@ a:active {
 }
 
 /* Media Queries Begin HERE! */
+@media only screen and (width <=1033px) {
+    #nav_menu ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+        margin: auto;
+        width: 100%;
+        padding-left: 9%;
+    }
+    #nav_menu li {
+        width: 85%;
+    }
+    #nav_menu a {
+        text-align: center;
+        display: block;
+        padding: 1em 0;
+        text-decoration: none;
+        background-color: purple;
+        color: white;
+        font-weight: bold;
+        border-right: none;
+    }
+}
+
 @media only screen and (width <= 800px) {
     div h1.page_head {
         font-size: 2em;
@@ -339,20 +364,3 @@ a:active {
         font-size: 1.15em;
     }
 }
-/*
-@media only screen and (width <= 525px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    header h2 {
-        line-height: 1em;
-        padding: 0;
-        margin: 0;
-    }
-
-    #headline2 {
-        flex-direction: column;
-    }
-}
-    */
