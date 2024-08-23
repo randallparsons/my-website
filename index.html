@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <div id="highlight">
+        <div id="header">
             <nav id="nav_menu">
                 <ul>
                     <li><a href="index.html" class="current">Home</a></li>
@@ -24,19 +24,19 @@
                     <li><a href="pages/chord_charts.html" class="lastitem">Open Chords!</a></li>
                 </ul>
             </nav>
-        </div>
-        <div>
-            <img src="images/D-chord.jpg" alt="picture of D chord tab" />
-            <div id="headline1">
-                <h1 class="page_head"><i class="fa-solid fa-guitar"></i> Chord Charts&nbsp;</h1>
-                <h1 class="page_head">&amp; Tablature</h1>
+            <div id="headline">
+                <img src="images/D-chord.jpg" alt="picture of D chord tab" />
+                <div id="headline1">
+                    <h1 class="page_head"><i class="fa-solid fa-guitar"></i> Chord Charts&nbsp;</h1>
+                    <h1 class="page_head" id="first_submast">&amp; Tablature</h1>
+                </div>
+                <div id="headline2">
+                    <h2 class="sub_head"><em><sup id="super">The&nbsp;</sup>Guitar Player's&nbsp;</em></h2>
+                    <h2 class="sub_head" id="second_submast"><em>Secret Language</em></h2>
+                </div>
+                <h3><em>Take the mystery out of guitar for once and for all!</em></h3>
+                <br />
             </div>
-            <div id="headline2">
-                <h2 class="sub_head"><em><sup id="super">The&nbsp;</sup>Guitar Player's&nbsp;</em></h2>
-                <h2 class="sub_head" id="second_submast"><em>Secret Language</em></h2>
-            </div>
-            <h3><em>Take the mystery out of guitar for once and for all!</em></h3>
-            <br />
         </div>
     </header>
     <main>
@@ -45,16 +45,17 @@
             lot of practice, but what about the "how?" of it all?&nbsp;&nbsp;Wouldn't it seem a lot easier if there was
             a simple way to communicate the complexities of the musical aspects of guitar with a simple visual language?
             Well guess what?</p>
-        <h2><em>...There is!</em></h2>
+        <h2><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...There is!</em></h2>
         <h2 id="steps_list"><strong>It can be as <em>EASY</em> as 1 * 2 * 3:</strong></h2>
         <ol class="special_items">
             <li>Learn basics of reading chord charts and tab within minutes!</li>
             <li>Practice translating to finger positions on the fretboard...</li>
-            <li>Clamp down tight, fingers perpendicular to fretboard, &amp; practice picking notes <em>clearly</em> and
+            <li>Clamp down tight, fingers perpendicular to the fretboard, &amp; practice picking notes <em>clearly</em>
+                and
                 strumming the whole chord!</li>
         </ol>
         <h2><strong>Benefits of Knowing Chord Charts and Tablature</strong></h2>
-        <ul><!-- A lot of exclamation marks, and not sure about italics.  Revisit later. -->
+        <ul id="benefits"><!-- A lot of exclamation marks, and not sure about italics.  Revisit later. -->
             <li><em>Guitar chord charts and tab is universally understood among musicians the world over!</em></li>
             <li><em>Trade your latest tricks and discoveries with your friends!</em></li>
             <li><em>Open up the world of free online versions of all your favorite songs!</em></li>
@@ -70,7 +71,11 @@
             <a href="https://tuxguitar.app" target="_blank" />TuxGuitar</a>
         </p>
         <br />
-        <a href="#">Back to Top</a>
+        <nav id="top_button">
+            <ul>
+                <li><a href="#">Back to Top</a></li>
+            </ul>
+        </nav>
         <br />
     </main>
     <footer>

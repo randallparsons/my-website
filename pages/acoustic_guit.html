@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chord Charts For All! | Guitar Basics!</title>
+    <title>Chord Charts For All! | Acoustic Guitar!</title>
+    <link rel="icon" href="../images/guitar-solid.svg" />
     <link rel="stylesheet" href="../styles/acoustic_styles.css" />
-    <link rel="icon" href="../images/D-chord.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a1e79fba5a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header><!-- Current graphic is the basic D-Chord, a sort of univeral starting point... -->
-        <div id="highlight">
+    <header>
+        <div id="header">
             <nav id="nav_menu">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -20,61 +24,80 @@
                     <li><a href="chord_charts.html" class="lastitem">Open Chords!</a></li>
                 </ul>
             </nav>
-        </div>
-        <div>
-            <img src="../images/D-chord.jpg" alt="picture of D chord tab" />
-            <div id="headline1">
-                <h1 class="page_head">Meet Your New&nbsp;</h1>
-                <h1 class="page_head">&amp; Best Friend!</h1>
+            <div id="headline">
+                <img src="../images/D-chord.jpg" alt="picture of D chord tab" />
+                <div id="headline1">
+                    <h1 class="page_head"><i class="fa-solid fa-guitar"></i> Meet Your New&nbsp;</h1>
+                    <h1 class="page_head" id="first_submast">Best Friend!</h1>
+                </div>
+                <div id="headline2">
+                    <h2 class="sub_head"><em><sup id="super">The&nbsp;</sup>Acoustic&nbsp;</em></h2>
+                    <h2 class="sub_head" id="second_submast"><em>Guitar</em></h2>
+                </div>
+                <h3><em>Before we get started, let's take a look under the hood...</em></h3>
+                <br />
             </div>
-            <div id="headline2">
-                <h2 class="sub_head"><em><sup id="super">The&nbsp;</sup>Acoustic Guitar</em></h2>
-            </div>
         </div>
-        <h2 id="acoustic_page">Before we get started, let's take a look under the hood...</h2>
-        <br />
     </header>
     <main>
-        <article>
-            <div>
-                <img src="../images/finger.jpg" alt="picture of D chord tab" />
-                <strong>Fingering:</strong>
-                <br />The placement of the fingers may seem alien at first. It is probably easiest to get used
-                to if you just look at the basic principles involved. You ideally want clean direct contact between your
-                finger tip and the fret board on top of the string. It is important to know that you are not putting
-                your finger on top of the fret itself! You are ideally placing your fingertip a depressing the string
-                against the fret board just behind the fret. In the chord charts it looks like the fingertip is placed
-                midway between the frets, but that is not actually going to work well at all. Another important point is
-                that your leverage against the string will be best if you can achieve a contact point that is nearly
-                perpendicular to the fret board.<br /><br />
-            </div>
-            <div>
-                <img src="../images/pick.jpg" alt="picture of D chord tab" />
-                <strong>Holding a
-                    Pick:</strong>
-                <br />You do not need to do the pinch of death when holding a pick. You want just enough pressure to
-                keep it in your grasp, but not so tight that you can't glide across the strings. This of the pick as a
-                surfboard and the strings as the waves. You just want a clean smooth glide. You are not trying to saw
-                the strings in half!<br /><br />
-                <div>
-                    <img src="../images/hand-placement.jpg" alt="picture of D chord tab" />
-                    <strong>Hand
-                        Placement:</strong>
-                    <br />The ideal hand placement is with the outer heal of your hand resting lightly against the
-                    outside of the bridge of the guitar near the soundhole and pick-guard. The outside of the wrist can
-                    be kept bouncing against the bridge as you strum, just try not to interfere too much with the
-                    strings (unless of course you are working on more percussive strumming!)
+        <div id="columns">
+            <div id="guit_anatomy">
+                <h3 id="block_header">Anatomy of a Guitar</h3>
+                <div id="guit_pic">
+                    <img src="../images/Acoustic-ed07sz.jpg" alt="picture of an acoustic guitar" />
                 </div>
-        </article>
-        <div id="guit_pic">
-            <img src="../images/Acoustic-ed03.jpg" alt="picture of an acoustic guitar" />
-            <!--<h2><em>Take the mystery out of guitar for once and for all!</em></h2>
-            <h3>No more confusion, just look and play!</h3>-->
+            </div>
+            <div id="texty">
+                <div class="text-columns">
+                    <img src="../images/finger-sz.jpg" alt="picture of D chord tab" />
+                    <h2><strong>Fingering:</strong></h2>
+                    <p>The placement of the fingers may seem alien at first.&nbsp; You ideally want clean direct contact
+                        between
+                        your finger tip and the fret board on top of the string.&nbsp; It is important to know that you
+                        are
+                        not putting your finger on top of the fret itself!&nbsp; You are ideally placing your fingertip
+                        and
+                        depressing the
+                        string against the fret board just behind the fret.&nbsp; Too close to the fret and you will
+                        deaden
+                        the string, but too far back and you will get string-buzz.&nbsp; Another important
+                        point is that your leverage against the string will be best if you can achieve a contact point
+                        that
+                        is nearly perpendicular to the fret board.
+                    </p>
+                </div>
+                <div class="text-columns">
+                    <img src="../images/pick-sz.jpg" alt="picture of D chord tab" id="pick" />
+                    <h2><strong>Holding a Pick:</strong></h2>
+                    <p>You do not need to do the pinch of death when holding a pick. &nbsp;You want just enough
+                        pressure to
+                        keep it in your grasp, but not so tight that you can't glide across the strings.&nbsp; Think of
+                        the pick as
+                        a
+                        surfboard and the strings as the waves. &nbsp;You just want a clean smooth glide. &nbsp;You are
+                        not trying to
+                        saw
+                        the strings in half!
+                    </p>
+                </div>
+                <div class="text-columns">
+                    <img src="../images/handplacement-sz.jpg" alt="picture of D chord tab" />
+                    <h2 id="clear_hands"><strong>Hand Placement:</strong></h2>
+                    <p>The ideal hand placement is with the outer heal of your hand (up through the line of the outside
+                        of your pinky) resting lightly against the
+                        outside of the bridge of the guitar near the soundhole and pick-guard.&nbsp; The outside of the
+                        wrist
+                        can
+                        be kept bouncing against the bridge as you strum, just try not to interfere too much with the
+                        strings (unless of course you are working on more percussive strumming!)
+                    </p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
-        <p id="quote"><em><q>Music expresses that which cannot be put into words and that which cannot remain
-                    silent.</q></em> ~ Victor Hugo</p>
+        <p><em><q>Music expresses that which cannot be put into words and that which cannot remain silent.</q></em> ~
+            Victor Hugo</p>
         <p id="copyright">&copy;<em> Randall Parsons,</em> 2024</p>
     </footer>
 </body>
